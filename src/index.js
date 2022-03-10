@@ -13,28 +13,40 @@ if (module.hot) {
 // Create a react component
 const App = () => {
   return (
-    <div className='ui container comments'>
+    <div className="ui container comments">
+      <ApprovalCard>
+        <div>
+          <h4>Warning!</h4>
+          Are you sure you want to do this?
+        </div>
+      </ApprovalCard>
+
       <ApprovalCard>
         <CommentDetail
-          author='Arash'
-          timeAgo='Today at 4:45PM'
-          content='NIce blog post'
-          avatar={faker.image.avatar()}
+          author="Arash"
+          timeAgo="Today at 4:45PM"
+          content="Nice blog post"
+          avatar={faker.image.image()}
         />
       </ApprovalCard>
-      
-      <CommentDetail
-        author='Jane'
-        timeAgo='Today at 2:00AM'
-        content='I like the subject'
-        avatar={faker.image.avatar()}
-      />
-      <CommentDetail
-        author='Sam'
-        timeAgo='Yesterday at 5:00PM'
-        content='I like the writhing'
-        avatar={faker.image.avatar()}
-      />
+
+      <ApprovalCard>
+        <CommentDetail
+          author="Alex"
+          timeAgo="Today at 2:00AM"
+          content="I like the subject"
+          avatar={faker.image.image()}
+        />
+      </ApprovalCard>
+
+      <ApprovalCard>
+        <CommentDetail
+          author="Jane"
+          timeAgo="Yesterday at 5:00PM"
+          content="I like the writing"
+          avatar={faker.image.image()}
+        />
+      </ApprovalCard>
     </div>
   );
 };
